@@ -6,15 +6,18 @@
 <html>
     <head>
     <!-- Metatags, links to Bootstrap and stylesheets -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Reservia | Hébergements vacances, activités</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="description" content="Trouver son hébergement et des activités pour des vacances de rêve" />
+        <link rel="stylesheet" href="style.css"/>
+        <meta name="description" content="Trouver son hébergement et des activités pour des vacances de rêve"/>
+    
+    <!-- Lien Icônes Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 
     <!-- Twitter Card data -->
-        <meta name="twitter:card" content="summary">
+        <meta name="twitter:card" content="summary"/>
 
     <!-- Open Graph data -->
         <meta property="og:title" content="Reservia | Hébergements vacances, activités"/>
@@ -39,31 +42,37 @@
                         <li><strong>S'inscrire</strong></li>
                     </ul>
                 </nav>
-                <div> <!------RECHERCHE------>
-                <!--TITRE-->
+                <div> <!------ RECHERCHE ------>
+                <!--GRAND TITRE-->
                     <h1>Trouver votre hébergement pour des vacances de rêve</h1>
                     <p>En plein centre ville ou en pleine nature</p>
                 <!--ZONE DE RECHERCHE-->
                     <form action="" method="post">
                         <p>
-                            <label for="search-destination"><i class="fas fa-map-marker-alt"></i></label>
+                        <!--ICONE MAP-->
+                            <label for="search-destination"><button type="submit"><i class="fas fa-map-marker-alt"></i></button></label>
+                        <!--CHAMP DE SAISIE VILLE-->
                             <input type="text" name="search-destination" id="search-destination" placeholder="Marseille, France" size="20"/>
+                        <!--BOUTON RECHERCHER-->
                             <input type="submit" value="Rechercher"/>
                         </p>
                     </form>
                 <!--FILTRES-->
                     <form>
-                        <p>
-                            <input type="button" value="Économique">
+                        <p> Filtres
+                        <!--BOUTON ÉCONOMIQUE-->
+                            <button type="submit"><i class="fas fa-money-bill-wave"></i> Économique</button>
+                            
+                        <!--BOUTON FAMILIAL-->
+                            <button type="submit"><i class="fas fa-child"></i> Familial</button>
 
-                            <input type="button" value="Familial">
+                        <!--BOUTON ROMANTIQUE-->
+                            <button type="submit"><i class="fas fa-heart"></i> Romantique</button>
 
-                            <input type="button" value="Romantique">
-
-                            <input type="button" value="Animaux autorisés">
-                        </p>
+                        <!--BOUTON ANIMAUX-->
+                            <button type="submit"><i class="fas fa-dog"></i> Animaux autorisés</button>                        </p>
                     </form>
-                    <p>Plus de 500 logements sont disponibles dans cette ville</p>
+                    <p><i class="fas fa-info-circle"></i> Plus de 500 logements sont disponibles dans cette ville</p>
                 </div>
             </header>
         <!------------------SECTION 1 - HÉBERGEMENTS------------------>
