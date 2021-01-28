@@ -1,0 +1,129 @@
+/******************* PAGE ENTIÈRE *******************/
+body
+{
+/* POLICE */
+    font-family: "Raleway", Georgia, sans-serif;
+    font-weight: normal;
+    padding-left: 30px;
+}
+
+/* GRAND TITRE */
+h1
+{
+    font-weight: bold;
+}
+
+/* LIENS */
+a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+/******************* HEADER *******************/
+/* HEARDER - NAV */
+nav
+{
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+}
+/* HEARDER - NAV - LOGO */
+nav #logo
+{
+    width: 70%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* HEARDER - NAV - MENU */
+nav ul
+{
+    list-style-type: none;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+}
+
+/* HEARDER - NAV - MENU - HÉBERGEMENTS */
+.accommodations-link
+{
+    color: #0065FC;
+    border-top: thick solid #0065FC;
+    padding-top: 30px;
+    margin-right: 20px;
+}
+
+/* HEARDER - NAV - MENU - ACTIVITÉS */
+.activities-link
+{
+    color: black;
+    padding-top: 30px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav a:hover
+{
+    color: #0065FC;
+    border-top: thick solid #0065FC;
+    padding-top: 30px;
+}
+
+/* HEARDER - NAV - MENU - S'INSCRIRE */
+.signup-link
+{
+    color: #0065FC;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* HEARDER - RECHERCHE */
+
+/* HEARDER - RECHERCHE - GRAND TITRE */
+header h1
+{
+    font-size: x-large;
+}
+
+/* HEARDER - RECHERCHE - FORM RECHERCHE */
+header form p
+{
+    font-weight: bold;
+}
+
+/* HEARDER - RECHERCHE - FORM RECHERCHE - ICONE MAP */
+
+/* HEARDER - RECHERCHE - FORM RECHERCHE - CHAMP DE SAISIE VILLE */
+
+/* HEARDER - RECHERCHE - FORM RECHERCHE - BOUTON RECHERCHER */
+
+/* HEARDER - RECHERCHE - FORM FILTRES - BOUTON ÉCONOMIQUE */
+
+/* HEARDER - RECHERCHE - FORM FILTRES - BOUTON FAMILIAL */
+
+/* HEARDER - RECHERCHE - FORM FILTRES - BOUTON ROMANTIQUE */
+
+/* HEARDER - RECHERCHE - FORM FILTRES - BOUTON ANIMAUX */
+
+/******************* SECTION 1 - HÉBERGEMENTS *******************/
+
+/* SECTION 1 - CARTE AUBERGE */
+
+/* SECTION 1 - CARTE PORT */
+
+/* SECTION 1 - CARTE MOUETTES */
+
+/* SECTION 1 - CARTE MER */
+
+/* SECTION 1 - CARTE PANIER */
+
+/* SECTION 1 - CARTE AMINA */
+
+/******************* SECTION 2 - POPULAIRES *******************/
