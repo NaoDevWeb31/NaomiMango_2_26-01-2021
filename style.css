@@ -7,12 +7,6 @@ body
     padding-left: 30px;
 }
 
-/* GRAND TITRE */
-h1
-{
-    font-weight: bold;
-}
-
 /* LIENS */
 a
 {
@@ -27,6 +21,7 @@ nav
     display: flex;
     flex-wrap: no-wrap;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 /* HEARDER - NAV - LOGO */
 nav #logo
@@ -35,7 +30,6 @@ nav #logo
     margin: auto;
     padding-top: 20px;
 }
-
 /* HEARDER - NAV - MENU */
 nav ul
 {
@@ -47,7 +41,6 @@ nav ul
     text-align: center;
     margin: auto;
 }
-
 /* HEARDER - NAV - MENU - HÉBERGEMENTS */
 .accommodations-link
 {
@@ -56,7 +49,6 @@ nav ul
     padding-top: 30px;
     margin-right: 20px;
 }
-
 /* HEARDER - NAV - MENU - ACTIVITÉS */
 .activities-link
 {
@@ -66,14 +58,12 @@ nav ul
     padding-left: 20px;
     padding-right: 20px;
 }
-
 nav a:hover
 {
     color: #0065FC;
     border-top: thick solid #0065FC;
     padding-top: 30px;
 }
-
 /* HEARDER - NAV - MENU - S'INSCRIRE */
 .signup-link
 {
@@ -85,19 +75,22 @@ nav a:hover
 }
 
 /* HEARDER - RECHERCHE */
-
-/* HEARDER - RECHERCHE - GRAND TITRE */
+/* HEARDER - RECHERCHE - GRANDS TITRES */
 header h1
 {
-    font-size: x-large;
+    font-size: 1.4em;
 }
-
+header h2
+{
+    font-weight: normal;
+    font-size: medium;
+    margin-top: -10px;
+}
 /* HEARDER - RECHERCHE - FORM RECHERCHE */
 header form p
 {
     font-weight: bold;
 }
-
 /* HEARDER - RECHERCHE - FORM RECHERCHE - ICONE MAP */
 
 /* HEARDER - RECHERCHE - FORM RECHERCHE - CHAMP DE SAISIE VILLE */
