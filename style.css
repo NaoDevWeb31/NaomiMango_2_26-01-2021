@@ -135,8 +135,9 @@ header h2
 .filters
 {
    display: flex;
-   margin-top: 10px;
+   margin-top: 20px;
    align-items: center;
+   flex-wrap: wrap;
 }
 .filters-title
 {
@@ -145,6 +146,15 @@ header h2
     margin-right: 20px;
 }
 /* HEARDER - RECHERCHE - FORM FILTRES - BOUTONS */
+#filters-buttons-row
+{
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -15px;
+}
 .filter-button
 {
     font-weight: 500;
@@ -153,10 +163,9 @@ header h2
     border: 2px solid #F2F2F2;
     border-radius: 50px;
     text-align: center;
-    padding: 0px;
+    width: fit-content;
     padding-left: 10px;
     padding-right: 20px;
-    margin: 10px;
 }
 .filter-button:hover
 {
@@ -169,6 +178,7 @@ header h2
     border: 1px solid transparent;
     color: #0065FC;
     border-radius: 50px;
+    width: auto;
     padding: 13px;
     margin-left: -12px;
 }
@@ -179,13 +189,81 @@ header h2
 /* HEARDER - RECHERCHE - INFO */
 #info .fas
 {
+    color: #0065FC;
+    text-align: center;
+    background-color: transparent;
     border: 1px solid #F2F2F2;
+    border-radius: 50%;
+    padding: 5px;
+    width: 15px;
+    margin-left: -5px;
+    margin-right: 10px;
+}
+/******************* SECTION 1 - HÉBERGEMENTS *******************/
+#accommodations
+{
+    background-color: #F2F2F2;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    width: 60%;
+    height: fit-content;
+    margin-top: 30px;
+    padding: 20px;
+    padding-left: 40px;
+}
+.accommodation-cards-frame
+{
+    display: grid;
+    grid-template-columns: 35% 35% 35%;
+    grid-template-rows: 50% 50% 50%;
+    grid-column-start: 3;
+    grid-gap: 5px;
+    place-content: space-between;
+}
+/* SECTION 1 - CARTES */
+.accommodation-card
+{
+    background-image: url("images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg") fixed no-repeat top center;
+    
+}
+.description-card
+{
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    width: 80%;
+    height: fit-content;
+    justify-self: center;
+    padding-left: 15px;
+    padding-bottom: 10px;
 }
 
-/******************* SECTION 1 - HÉBERGEMENTS *******************/
+#accommodations h3
+{
+    font-size: medium;
+    margin-bottom: 5px;
+}
+.range
+{
+    font-size: 0.9em;
+}
+.low-price
+{
+    font-weight: bold;
+}
+.accommodation-card .fas
+{
+    color: #0065FC;
+}
+.rating .fas
+{
+    color: #F2F2F2;
+}
 
-/* SECTION 1 - CARTE AUBERGE */
-
+#accommodations p
+{
+    font-weight: bold;
+}
 /* SECTION 1 - CARTE PORT */
 
 /* SECTION 1 - CARTE MOUETTES */
