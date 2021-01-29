@@ -223,11 +223,6 @@ header h2
 /* SECTION 1 - CARTES */
 .accommodation-card
 {
-    background-image: url("images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg") fixed no-repeat top center;
-    
-}
-.description-card
-{
     background-color: white;
     border: 1px solid transparent;
     border-radius: 20px;
@@ -237,7 +232,10 @@ header h2
     padding-left: 15px;
     padding-bottom: 10px;
 }
-
+.description-card
+{
+    background-color: white;
+}
 #accommodations h3
 {
     font-size: medium;
@@ -263,6 +261,16 @@ header h2
 #accommodations p
 {
     font-weight: bold;
+}
+/* SECTION 1 - CARTE AUBERGE */
+#auberge-picture
+{
+    background: url("images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg") no-repeat fixed;
+    background-size: cover;
+    border: 1px solid white;
+    border-radius: 20px 20px 0px 0px;
+    width: 80%;
+    height: 100%;
 }
 /* SECTION 1 - CARTE PORT */
 
