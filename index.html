@@ -39,9 +39,9 @@
                         <img src="images/logo/Reservia.svg" alt="logo Reservia" title="Reservia.com"/>
                     </div>
                     <ul> <!--MENU-->
-                        <li><a href="#accommodations" class="accommodations-link">Hébergements</a></li>
-                        <li><a href="#activities" class="activities-link">Activités</a></li>
-                        <li><a href="#" class="signup-link">S'inscrire</a></li>
+                        <li><a href="#accommodations" id="accommodations-link">Hébergements</a></li>
+                        <li><a href="#activities" id="activities-link">Activités</a></li>
+                        <li><a href="#" id="signup-link">S'inscrire</a></li>
                     </ul>
                 </nav>
                 <div> <!------ RECHERCHE ------>
@@ -49,19 +49,19 @@
                     <h1>Trouver votre hébergement pour des vacances de rêve</h1>
                     <h2>En plein centre ville ou en pleine nature</h2>
                 <!--ZONE DE RECHERCHE-->
-                    <form action="" method="post" class="search-zone">
+                    <form action="" method="post" id="search-zone">
                         <p>
                         <!--ICONE MAP-->
                             <label for="map"><button type="submit" id="map"><i class="fas fa-map-marker-alt fa-lg"></i></button></label>
                         <!--CHAMP DE SAISIE VILLE-->
-                            <input type="text" name="search-destination" id="search-destination" placeholder="Marseille, France" size="20"/>
+                            <input type="text" name="search-destination" id="search-destination" placeholder="Marseille, France" size="25"/>
                         <!--BOUTON RECHERCHER-->
                             <input type="submit" value="Rechercher" id="search-button"/>
                         </p>
                     </form>
                 <!--FILTRES-->
-                    <form action="" method="POST" class="filters">
-                        <p><span class="filters-title">Filtres</span></p>
+                    <form action="" method="POST" id="filters">
+                        <p><span id="filters-title">Filtres</span></p>
                         <div id="filters-buttons-row">
                             <!--BOUTON ÉCONOMIQUE-->
                             <div class="filter-button"><i class="fas fa-money-bill-wave"></i><span class="filter-name">Économique</span></div>
@@ -79,91 +79,135 @@
                 </div>
                 <p id="info"><i class="fas fa-info fa-sm"></i>Plus de 500 logements sont disponibles dans cette ville</p>
             </header>
-        <!------------------SECTION 1 - HÉBERGEMENTS------------------>
-            <section id="accommodations">
-                <h1>Hébergements à Marseille</h1>
-                
-            <!--CARTE AUBERGE-->
-                <div class="accommodation-cards-frame">
-                    <a href="#">
-                        <div class="accommodation-card">
-                            <div id="auberge-picture"></div>
-                            <div class="description-card">
-                                    <h3>Auberge la Cannebière</h3>
-                                    <span class="range">Nuit à partir de <span class="low-price">25€</span></span><br/>
+        <!------------------MAIN - HÉBERGEMENTS------------------>
+            <main id="accommodations">
+            <!------------------MAIN - SECTION 1 - LISTE HÉBERGEMENTS------------------>
+                <section id="accommodations-list">
+                    <h1>Hébergements à Marseille</h1>
+                <!--CARTES HÉBERGEMENTS-->
+                    <div id="accommodation-cards-frame">
+                    <!--CARTE AUBERGE-->                        
+                        <a href="#">
+                            <div class="accommodation-card">
+                                <img src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo Auberge Cannebière"/>
+                                <div class="description-card">
+                                        <h3>Auberge la Cannebière</h3>
+                                        <span class="range">Nuit à partir de <span class="low-price">25€</span></span><br/>
+                                    <!--RATING-->
+                                        <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    <!--CARTE PORT-->
+                        <a href="#">
+                            <div class="accommodation-card">
+                                <img src="images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo Hôtel port"/>
+                                <div class="description-card">
+                                    <h3>Hôtel du port</h3>
+                                    <span class="range">Nuit à partir de 52€</span><br/>
+                                <!--RATING-->
+                                    <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i>
+                                </div>
+                            </div>
+                        </a>
+                    <!--CARTE MOUETTES-->
+                        <a href="#">
+                            <div class="accommodation-card">
+                                <img src="images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo Hôtel mouettes"/>
+                                <div class="description-card">
+                                    <h3>Hôtel Les mouettes</h3>
+                                    <span class="range">Nuit à partir de 76€</span><br/>
                                 <!--RATING-->
                                     <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-            <!--CARTE PORT-->
-                    <a href="#">
-                        <div class="accommodation-card">
-                            <div class="description-card">
-                                <h3>Hôtel du port</h3>
-                                <span class="range">Nuit à partir de 52€</span><br/>
-                            <!--RATING-->
-                                <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i>
+                        </a>
+                    <!--CARTE MER-->
+                        <a href="#">
+                            <div class="accommodation-card">
+                                <img src="images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo Hôtel mer"/>
+                                <div class="description-card">
+                                    <h3>Hôtel de la mer</h3>
+                                    <span class="range">Nuit à partir de 46€</span><br/>
+                                <!--RATING-->
+                                    <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i></span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-            <!--CARTE MOUETTES-->
-                    <a href="#">
-                        <div class="accommodation-card">
-                            <div class="description-card">
-                                <h3>Hôtel Les mouettes</h3>
-                                <span class="range">Nuit à partir de 76€</span><br/>
-                            <!--RATING-->
-                                <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
+                        </a>
+                    <!--CARTE PANIER-->
+                        <a href="#">
+                            <div class="accommodation-card">
+                                <img src="images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo Auberge Panier"/>
+                                <div class="description-card">
+                                    <h3>Hôtel Le Panier</h3>
+                                    <span class="range">Nuit à partir de <span class="low-price">23€</span></span><br/>
+                                <!--RATING-->
+                                    <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-            <!--CARTE MER-->
-                    <a href="#">
-                        <div class="accommodation-card">
-                            <div class="description-card">
-                                <h3>Hôtel de la mer</h3>
-                                <span class="range">Nuit à partir de 46€</span><br/>
-                            <!--RATING-->
-                                <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i></span>
+                        </a>
+                    <!--CARTE AMINA-->
+                        <a href="#">
+                            <div class="accommodation-card">
+                                <img src="images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo Hôtel Amina"/>
+                                <div class="description-card">
+                                    <h3>Hôtel chez Amina</h3>
+                                    <span class="range">Nuit à partir de 96€</span><br/>
+                                <!--RATING-->
+                                    <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-            <!--CARTE PANIER-->
-                    <a href="#">
-                        <div class="accommodation-card">
-                            <div class="description-card">
-                                <h3>Hôtel Le Panier</h3>
-                                <span class="range">Nuit à partir de <span class="low-price">23€</span></span><br/>
-                            <!--RATING-->
-                                <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
+                        </a>
+                    </div>
+                    <p>Afficher plus</p>
+                </section>
+            <!------------------MAIN - SECTION 2 - POPULAIRES------------------>
+                <section id="popular-accommodations">
+                    <header id="popular-header">
+                        <h1>Les plus populaires</h1>
+                        <div id="chart"><i class="fas fa-chart-line fa-lg"></i></div>
+                    </header>
+                <!--CARTES POPULAIRES-->
+                    <div id="popular-cards-frame">
+                    <!--CARTE HÔTEL SOLEIL-->
+                        <a href="#">
+                            <div class="popular-card">
+                                <img src="images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo Hôtel Soleil"/>
+                                <div class="popular-description-card">
+                                        <h3>Hôtel le Soleil du matin</h3>
+                                        <span class="range">Nuit à partir de 128€</span><br/>
+                                    <!--RATING-->
+                                        <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs">
+                                </div>
                             </div>
-                        </div>
-                    </a>
-
-            <!--CARTE AMINA-->
-                    <a href="#">
-                        <div class="accommodation-card">
-                            <div class="description-card">
-                                <h3>Hôtel chez Amina</h3>
-                                <span class="range">Nuit à partir de 96€</span><br/>
-                            <!--RATING-->
-                                <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i>
+                        </a>
+                    <!--CARTE CHAMBRES D'HÔTES-->
+                        <a href="#">
+                            <div class="popular-card">
+                                <img src="images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo Chambres d'Hôtes"/>
+                                <div class="popular-description-card">
+                                    <h3>Au cœur de l'eau Chambres d'hôtes</h3>
+                                    <span class="range">Nuit à partir de 71€</span><br/>
+                                <!--RATING-->
+                                    <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
+                                </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-                
-                <p>Afficher plus</p>
-            </section>
-        <!------------------SECTION 2 - POPULAIRES------------------>
-            <section>
-
-            </section>
+                        </a>
+                    <!--CARTE BLEU ET BLANC-->
+                        <a href="#">
+                            <div class="popular-card">
+                                <img src="images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo Hôtel Bleu et Blanc"/>
+                                <div class="popular-description-card">
+                                    <h3>Hôtel Tout bleu et Blanc</h3>
+                                    <span class="range">Nuit à partir de 68€</span><br/>
+                                <!--RATING-->
+                                    <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </main>
         <!------------------SECTION 3 - ACTIVITÉS------------------>
             <section>
 

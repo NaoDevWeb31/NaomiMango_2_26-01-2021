@@ -1,285 +1,289 @@
 /******************* PAGE ENTIÈRE *******************/
-body
-{
-/* POLICE */
-    font-family: "Raleway", Georgia, sans-serif;
-    font-weight: normal;
-    padding-left: 30px;
+body {
+  /* POLICE */
+  font-family: "Raleway", Georgia, sans-serif;
+  font-weight: normal;
+  padding-left: 30px;
 }
 
 /* LIENS */
-a
-{
-    color: inherit;
-    text-decoration: none;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /******************* HEADER *******************/
 /* HEARDER - NAV */
-nav
-{
-    display: flex;
-    flex-wrap: no-wrap;
-    justify-content: space-between;
-    margin-bottom: 30px;
+nav {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 /* HEARDER - NAV - LOGO */
-nav #logo
-{
-    width: 70%;
-    margin: auto;
-    padding-top: 20px;
+nav #logo {
+  width: 70%;
+  margin: auto;
+  padding-top: 20px;
 }
 /* HEARDER - NAV - MENU */
-nav ul
-{
-    list-style-type: none;
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin: auto;
+nav ul {
+  list-style-type: none;
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: auto;
 }
 /* HEARDER - NAV - MENU - HÉBERGEMENTS */
-.accommodations-link
-{
-    color: #0065FC;
-    border-top: thick solid #0065FC;
-    padding-top: 30px;
-    margin-right: 20px;
+#accommodations-link {
+  color: #0065fc;
+  border-top: thick solid #0065fc;
+  padding-top: 30px;
+  margin-right: 20px;
 }
 /* HEARDER - NAV - MENU - ACTIVITÉS */
-.activities-link
-{
-    color: black;
-    padding-top: 30px;
-    margin-right: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+#activities-link {
+  color: black;
+  padding-top: 30px;
+  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-nav a:hover
-{
-    color: #0065FC;
-    border-top: thick solid #0065FC;
-    padding-top: 30px;
+nav a:hover {
+  color: #0065fc;
+  border-top: thick solid #0065fc;
+  padding-top: 30px;
 }
 /* HEARDER - NAV - MENU - S'INSCRIRE */
-.signup-link
-{
-    color: #0065FC;
-    font-weight: bold;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
+#signup-link {
+  color: #0065fc;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /* HEARDER - RECHERCHE */
 /* HEARDER - RECHERCHE - GRANDS TITRES */
-header h1
-{
-    font-size: 1.4em;
+header h1 {
+  font-size: 1.4em;
 }
-header h2
-{
-    font-weight: normal;
-    font-size: medium;
-    margin-top: -10px;
+header h2 {
+  font-weight: normal;
+  font-size: medium;
+  margin-top: -10px;
 }
 /* HEARDER - RECHERCHE - FORM RECHERCHE */
-.search-zone
-{
-    margin-top: 20px;
+#search-zone {
+  margin-top: 20px;
 }
-.search-zone p
-{
-    font-weight: bold;
+#search-zone p {
+  font-weight: bold;
 }
 /* HEARDER - RECHERCHE - FORM RECHERCHE - ICONE MAP */
-#map
-{
-    background-color: #F2F2F2;
-    border: 1px solid transparent;
-    border-radius: 10px 0px 0px 10px;
-    padding: 15px;
-    margin-right: -5px;
+#map {
+  background-color: #f2f2f2;
+  border: 1px solid transparent;
+  border-radius: 10px 0px 0px 10px;
+  padding: 15px;
+  margin-right: -5px;
 }
 /* HEARDER - RECHERCHE - FORM RECHERCHE - CHAMP DE SAISIE VILLE */
-#search-destination
-{
-    border: thin solid #F2F2F2;
-    padding: 15px;
-    padding-bottom: 15px;
-    margin-right: -5px;
+#search-destination {
+  border: thin solid #f2f2f2;
+  padding: 15px;
+  padding-bottom: 15px;
+  margin-right: -5px;
 }
-#search-destination::placeholder
-{
-    color: black;
-    font-size: medium;
-    font-weight: 500;
+#search-destination::placeholder {
+  color: black;
+  font-size: medium;
+  font-weight: 500;
 }
 
 /* HEARDER - RECHERCHE - FORM RECHERCHE - BOUTON RECHERCHER */
-#search-button
-{
-    background-color: #0065FC;
-    border: 1px solid transparent;
-    border-radius: 0px 10px 10px 0px;
-    padding: 13px;
-    padding-bottom: 14px;
-    font-weight: 500;
-    color: white;
-    font-size: medium;
+#search-button {
+  background-color: #0065fc;
+  border: 1px solid transparent;
+  border-radius: 0px 10px 10px 0px;
+  padding: 13px;
+  padding-bottom: 14px;
+  font-weight: 500;
+  color: white;
+  font-size: medium;
 }
 /* HEARDER - RECHERCHE - FORM FILTRES */
-.filters
-{
-   display: flex;
-   margin-top: 20px;
-   align-items: center;
-   flex-wrap: wrap;
+#filters {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.filters-title
-{
-    font-weight: bold;
-    font-size: medium;
-    margin-right: 20px;
+#filters-title {
+  font-weight: bold;
+  font-size: medium;
+  margin-right: 20px;
 }
 /* HEARDER - RECHERCHE - FORM FILTRES - BOUTONS */
-#filters-buttons-row
-{
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: -15px;
+#filters-buttons-row {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: -15px;
 }
-.filter-button
-{
-    font-weight: 500;
-    font-size: medium;
-    background-color: transparent;
-    border: 2px solid #F2F2F2;
-    border-radius: 50px;
-    text-align: center;
-    width: fit-content;
-    padding-left: 10px;
-    padding-right: 20px;
+.filter-button {
+  font-weight: 500;
+  font-size: medium;
+  background-color: transparent;
+  border: 2px solid #f2f2f2;
+  border-radius: 50px;
+  text-align: center;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 20px;
 }
-.filter-button:hover
-{
-    background-color: #DEEBFF;
-    flex-grow: 0.1;
+.filter-button:hover {
+  background-color: #deebff;
+  flex-grow: 0.1;
 }
-.filters .fas
-{
-    background-color: #DEEBFF;
-    border: 1px solid transparent;
-    color: #0065FC;
-    border-radius: 50px;
-    width: auto;
-    padding: 13px;
-    margin-left: -12px;
+#filters .fas {
+  background-color: #deebff;
+  border: 1px solid transparent;
+  color: #0065fc;
+  border-radius: 50px;
+  width: auto;
+  padding: 13px;
+  margin-left: -12px;
 }
-.filter-name
-{
-    padding-left: 10px;
+.filter-name {
+  padding-left: 10px;
 }
 /* HEARDER - RECHERCHE - INFO */
-#info .fas
-{
-    color: #0065FC;
-    text-align: center;
-    background-color: transparent;
-    border: 1px solid #F2F2F2;
-    border-radius: 50%;
-    padding: 5px;
-    width: 15px;
-    margin-left: -5px;
-    margin-right: 10px;
+#info .fas {
+  color: #0065fc;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #f2f2f2;
+  border-radius: 50%;
+  padding: 5px;
+  width: 15px;
+  margin-left: -5px;
+  margin-right: 10px;
 }
-/******************* SECTION 1 - HÉBERGEMENTS *******************/
-#accommodations
-{
-    background-color: #F2F2F2;
-    border: 1px solid transparent;
-    border-radius: 20px;
-    width: 60%;
-    height: fit-content;
-    margin-top: 30px;
-    padding: 20px;
-    padding-left: 40px;
+/******************* MAIN - HÉBERGEMENTS *******************/
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2em;
 }
-.accommodation-cards-frame
-{
-    display: grid;
-    grid-template-columns: 35% 35% 35%;
-    grid-template-rows: 50% 50% 50%;
-    grid-column-start: 3;
-    grid-gap: 5px;
-    place-content: space-between;
+h3 {
+  font-size: medium;
+  margin-bottom: 5px;
+}
+/******************* MAIN - SECTION 1 - LISTE HÉBERGEMENTS *******************/
+#accommodations-list {
+  background-color: #f2f2f2;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  margin-top: 2em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+#accommodation-cards-frame {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5em;
 }
 /* SECTION 1 - CARTES */
-.accommodation-card
-{
-    background-color: white;
-    border: 1px solid transparent;
-    border-radius: 20px;
-    width: 80%;
-    height: fit-content;
-    justify-self: center;
-    padding-left: 15px;
-    padding-bottom: 10px;
+.accommodation-card {
+  background-color: white;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
 }
-.description-card
-{
-    background-color: white;
+.accommodation-card img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 6.5em;
+  object-fit: cover;
 }
-#accommodations h3
-{
-    font-size: medium;
-    margin-bottom: 5px;
+.description-card {
+  margin-top: -5px;
+  margin-bottom: 0px;
+  margin-left: 1em;
 }
-.range
-{
-    font-size: 0.9em;
+.range {
+  font-size: 0.9em;
 }
-.low-price
-{
-    font-weight: bold;
+.low-price {
+  font-weight: bold;
 }
-.accommodation-card .fas
-{
-    color: #0065FC;
+.accommodation-card .fas {
+  color: #0065fc;
 }
-.rating .fas
-{
-    color: #F2F2F2;
+.rating .fas {
+  color: #f2f2f2;
 }
 
-#accommodations p
-{
-    font-weight: bold;
+#accommodations-list p {
+  font-weight: bold;
+  margin-top: 2.5em;
 }
-/* SECTION 1 - CARTE AUBERGE */
-#auberge-picture
-{
-    background: url("images/hebergements/2_large/marcus-loke-WQJvWU_HZFo-unsplash.jpg") no-repeat fixed;
-    background-size: cover;
-    border: 1px solid white;
-    border-radius: 20px 20px 0px 0px;
-    width: 80%;
-    height: 100%;
+
+/******************* MAIN - SECTION 2 - POPULAIRES *******************/
+#popular-accommodations {
+  background-color: #f2f2f2;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  margin-top: 2em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
 }
-/* SECTION 1 - CARTE PORT */
-
-/* SECTION 1 - CARTE MOUETTES */
-
-/* SECTION 1 - CARTE MER */
-
-/* SECTION 1 - CARTE PANIER */
-
-/* SECTION 1 - CARTE AMINA */
-
-/******************* SECTION 2 - POPULAIRES *******************/
+#popular-header {
+  display: flex;
+  align-items: baseline;
+}
+#popular-header h1 {
+  width: 90%;
+}
+#chart {
+  width: 10%;
+}
+#popular-cards-frame {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1.5em;
+}
+/* SECTION 2 - CARTES */
+.popular-card {
+  background-color: white;
+  border: 5px solid transparent;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+.popular-card img {
+  border-radius: 20px 0px 0px 20px;
+  width: 40%;
+  height: 8em;
+  object-fit: cover;
+}
+.popular-description-card {
+  margin-left: 1em;
+}
+.popular-card .fas {
+  color: #0065fc;
+}
+.rating .fas {
+  color: #f2f2f2;
+}
