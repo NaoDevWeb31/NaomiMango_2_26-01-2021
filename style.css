@@ -3,7 +3,8 @@ body {
   /* POLICE */
   font-family: "Raleway", Georgia, sans-serif;
   font-weight: normal;
-  padding-left: 30px;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 /* LIENS */
@@ -17,7 +18,6 @@ a {
 nav {
   display: flex;
   flex-wrap: no-wrap;
-  justify-content: space-between;
   margin-bottom: 30px;
 }
 /* HEARDER - NAV - LOGO */
@@ -32,9 +32,8 @@ nav ul {
   width: 30%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  text-align: center;
   margin: auto;
+  flex-wrap: wrap;
 }
 /* HEARDER - NAV - MENU - HÉBERGEMENTS */
 #accommodations-link {
@@ -262,7 +261,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-gap: 1.5em;
+  grid-gap: 2em;
 }
 /* SECTION 2 - CARTES */
 .popular-card {
@@ -281,9 +280,106 @@ h3 {
 .popular-description-card {
   margin-left: 1em;
 }
+.rating-row {
+  margin-top: 1.5em;
+}
 .popular-card .fas {
   color: #0065fc;
 }
 .rating .fas {
   color: #f2f2f2;
+}
+/******************* SECTION 3 - ACTIVITÉS *******************/
+#activities {
+  margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+}
+#activities-cards-frame {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2em;
+}
+.activities-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.activities-description-card {
+  margin: 1em 1em 0em 1em;
+  padding-bottom: 1em;
+}
+/* SECTION 3 - CARTE VIEUX PORT */
+#port-activities-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+#port-activities-card img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 23em;
+  object-fit: cover;
+}
+/* SECTION 3 - CARTE FORT */
+#fort-activities-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+#fort-activities-card img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 10em;
+  object-fit: cover;
+}
+/* SECTION 3 - CARTE ÎLES */
+#îles-activities-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+#îles-activities-card img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 7em;
+  object-fit: cover;
+}
+/* SECTION 3 - CARTE PARC NATIONAL */
+#parcn-activities-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+#parcn-activities-card img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 23em;
+  object-fit: cover;
+}
+/* SECTION 3 - CARTE NOTRE DAME */
+#dame-activities-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+#dame-activities-card img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 8.5em;
+  object-fit: cover;
+}
+/* SECTION 3 - CARTE PARC */
+#parc-activities-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+}
+#parc-activities-card img {
+  border-radius: 20px 20px 0px 0px;
+  width: 100%;
+  height: 8.5em;
+  object-fit: cover;
 }
