@@ -3,8 +3,6 @@ body {
   /* POLICE */
   font-family: "Raleway", Georgia, sans-serif;
   font-weight: normal;
-  padding-left: 2em;
-  padding-right: 2em;
 }
 
 /* LIENS */
@@ -14,6 +12,10 @@ a {
 }
 
 /******************* HEADER *******************/
+header {
+  padding-left: 2em;
+  padding-right: 2em;
+}
 /* HEARDER - NAV */
 nav {
   display: flex;
@@ -178,6 +180,8 @@ main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 h3 {
   font-size: medium;
@@ -294,6 +298,8 @@ h3 {
   margin-top: 3em;
   display: flex;
   flex-direction: column;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 #activities-cards-frame {
   display: grid;
@@ -382,4 +388,38 @@ h3 {
   width: 100%;
   height: 8.5em;
   object-fit: cover;
+}
+/******************* FOOTER *******************/
+footer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #f2f2f2;
+  width: 95%;
+  margin: 2em 0em -1em -1em;
+  padding: 1em 2.5em;
+}
+footer p {
+  margin-bottom: 0;
+}
+/* FOOTER - À PROPOS */
+#about {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0.5em;
+}
+/* FOOTER - NOS HÉBERGEMENTS */
+#our-accommodations {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0.5em;
+}
+/* FOOTER - ASSISTANCE */
+#assistance {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 0.5em;
 }
