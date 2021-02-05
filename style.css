@@ -4,7 +4,6 @@ body {
   font-family: "Raleway", Georgia, sans-serif;
   font-weight: normal;
 }
-
 /* LIENS */
 a {
   color: inherit;
@@ -16,57 +15,155 @@ header {
   padding-left: 2em;
   padding-right: 2em;
 }
+/** POINTS DE RUPTURE **/
+@media all and (max-width: 768px) {
+  header {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+@media all and (max-width: 375px) {
+  header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 /* HEARDER - NAV */
 nav {
   display: flex;
-  flex-wrap: no-wrap;
   margin-bottom: 30px;
+  width: 100%;
+}
+/** POINTS DE RUPTURE **/
+@media all and (max-width: 480px) {
+  nav {
+    display: grid;
+    grid-template-areas:
+      "logo signup"
+      "accommodations activities";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 /* HEARDER - NAV - LOGO */
 nav #logo {
   width: 70%;
-  margin: auto;
   padding-top: 20px;
+}
+/** POINTS DE RUPTURE **/
+@media all and (max-width: 1024px) {
+  nav #logo {
+    width: 50%;
+  }
+}
+@media all and (max-width: 480px) {
+  nav #logo {
+    grid-area: logo;
+    width: 100%;
+  }
 }
 /* HEARDER - NAV - MENU */
 nav ul {
   list-style-type: none;
-  width: 30%;
-  display: flex;
-  justify-content: space-between;
+  width: 20%;
   margin: auto;
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+}
+@media all and (min-width: 690px) and (max-width: 1024px) {
+  nav ul {
+    width: 30%;
+  }
+}
+@media all and (min-width: 481px) and (max-width: 689px) {
+  nav ul {
+    width: auto;
+  }
+}
+@media all and (max-width: 480px) {
+  nav ul {
+    display: contents;
+  }
 }
 /* HEARDER - NAV - MENU - HÉBERGEMENTS */
 #accommodations-link {
   color: #0065fc;
-  border-top: thick solid #0065fc;
-  padding-top: 30px;
-  margin-right: 20px;
+}
+/* POINTS DE RUPTURE **/
+@media all and (min-width: 481px) {
+  #accommodations-link {
+    border-top: 2px solid #0065fc;
+    padding-top: 31px;
+  }
+}
+@media all and (max-width: 480px) {
+  #accommodations-item {
+    grid-area: accommodations;
+    border-bottom: 2px solid #0065fc;
+    margin: auto;
+    text-align: center;
+  }
 }
 /* HEARDER - NAV - MENU - ACTIVITÉS */
 #activities-link {
   color: black;
-  padding-top: 30px;
-  margin-right: 20px;
   padding-left: 20px;
   padding-right: 20px;
 }
+/** POINTS DE RUPTURE **/
+@media all and (min-width: 481px) {
+  #activities-link {
+    padding-top: 31px;
+  }
+}
+@media all and (max-width: 480px) {
+  #activities-link {
+    padding-bottom: 10px;
+    grid-area: activities;
+  }
+}
 nav a:hover {
   color: #0065fc;
-  border-top: thick solid #0065fc;
-  padding-top: 30px;
+}
+/** POINTS DE RUPTURE **/
+@media all and (min-width: 481px) {
+  nav a:hover {
+    border-top: 2px solid #0065fc;
+    padding-top: 31px;
+  }
+}
+@media all and (max-width: 480px) {
+  nav a:hover {
+    border-bottom: 2px solid #0065fc;
+    padding-bottom: 10px;
+  }
 }
 /* HEARDER - NAV - MENU - S'INSCRIRE */
+#signup {
+  margin: auto;
+}
+/** POINTS DE RUPTURE **/
+@media all and (max-width: 480px) {
+  #signup {
+    grid-area: signup;
+  }
+}
 #signup-link {
   color: #0065fc;
   font-weight: bold;
-  padding-top: 30px;
+  padding-top: 31px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
 /* HEARDER - RECHERCHE */
+/** POINTS DE RUPTURE **/
+@media all and (max-width: 768px) {
+  #search {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
 /* HEARDER - RECHERCHE - GRANDS TITRES */
 header h1 {
   font-size: 1.4em;
@@ -88,7 +185,8 @@ header h2 {
   background-color: #f2f2f2;
   border: 1px solid transparent;
   border-radius: 10px 0px 0px 10px;
-  padding: 15px;
+  padding: 17px;
+  padding-bottom: 16px;
   margin-right: -5px;
 }
 /* HEARDER - RECHERCHE - FORM RECHERCHE - CHAMP DE SAISIE VILLE */
@@ -97,23 +195,67 @@ header h2 {
   padding: 15px;
   padding-bottom: 15px;
   margin-right: -5px;
+  font-size: medium;
+  width: 20%;
 }
 #search-destination::placeholder {
   color: black;
   font-size: medium;
   font-weight: 500;
 }
-
+/** POINTS DE RUPTURE **/
+@media all and (min-width: 600px) and (max-width: 768px) {
+  #search-destination {
+    width: 31%;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 599px) {
+  #search-destination {
+    width: 43%;
+  }
+}
+@media all and (min-width: 386px) and (max-width: 500px) {
+  #search-destination {
+    width: 60%;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 385px) {
+  #search-destination {
+    width: 55%;
+  }
+}
+@media all and (min-width: 280px) and (max-width: 319px) {
+  #search-destination {
+    width: 47%;
+  }
+}
 /* HEARDER - RECHERCHE - FORM RECHERCHE - BOUTON RECHERCHER */
 #search-button {
   background-color: #0065fc;
   border: 1px solid transparent;
   border-radius: 0px 10px 10px 0px;
-  padding: 13px;
-  padding-bottom: 14px;
+  padding: 15px;
+  padding-bottom: 15px;
   font-weight: 500;
   color: white;
   font-size: medium;
+}
+#search-button .fas {
+  display: none;
+}
+/** POINTS DE RUPTURE **/
+@media all and (max-width: 500px) {
+  #search-button {
+    border-radius: 15px;
+    margin-left: -10px;
+  }
+  #text-search-button {
+    display: none;
+  }
+  #search-button .fas {
+    display: inline;
+    align-self: center;
+  }
 }
 /* HEARDER - RECHERCHE - FORM FILTRES */
 #filters {
@@ -147,6 +289,34 @@ header h2 {
   padding-left: 10px;
   padding-right: 20px;
 }
+/******** POINTS DE RUPTURE *********/
+@media all and (max-width: 1080px) {
+  #filters-buttons-row {
+    flex-wrap: wrap;
+    width: 90%;
+  }
+}
+@media all and (max-width: 991px) {
+  filter {
+    flex-direction: column;
+  }
+  #filters-buttons-row {
+    width: 100%;
+  }
+}
+@media all and (max-width: 768px) {
+  #filters-buttons-row {
+    justify-content: flex-start;
+  }
+  .filter-button {
+    margin: 0.5em;
+  }
+}
+@media all and (max-width: 554px) {
+  .filter-button {
+    margin: 0 0.5em 0.5em 0;
+  }
+}
 .filter-button:hover {
   background-color: #deebff;
   flex-grow: 0.1;
@@ -175,13 +345,58 @@ header h2 {
   margin-left: -5px;
   margin-right: 10px;
 }
+/** POINTS DE RUPTURE **/
+@media all and (max-width: 768px) {
+  #info {
+    margin-left: 0.5em;
+  }
+}
 /******************* MAIN - HÉBERGEMENTS *******************/
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 66% 1fr;
   grid-gap: 2em;
   padding-left: 2em;
   padding-right: 2em;
+}
+/** POINTS DE RUPTURE RESPONSIVE **/
+@media all and (max-width: 1173px) {
+  main {
+    grid-template-columns: 67% 1fr;
+  }
+}
+@media all and (max-width: 1173px) {
+  main {
+    grid-template-columns: 68% 1fr;
+  }
+}
+@media all and (max-width: 1105px) {
+  main {
+    grid-template-columns: 69% 1fr;
+  }
+}
+@media all and (max-width: 1091px) {
+  main {
+    grid-template-columns: 70% 1fr;
+  }
+}
+@media all and (max-width: 1076px) {
+  main {
+    grid-template-columns: 71% 1fr;
+  }
+}
+@media all and (max-width: 1062px) {
+  main {
+    grid-template-columns: 72% 1fr;
+  }
+}
+@media all and (max-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 h3 {
   font-size: medium;
@@ -197,11 +412,45 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+/** POINTS DE RUPTURE RESPONSIVE **/
+@media all and (max-width: 1190px) {
+  #accommodations-list {
+    padding-bottom: 0;
+  }
+}
+@media all and (max-width: 1024px) {
+  #accommodations-list {
+    background-color: transparent;
+    margin-top: 0;
+  }
+}
+@media all and (max-width: 767) {
+  #accommodations-list {
+    background-color: transparent;
+    margin-top: 0;
+    padding: 0;
+  }
+}
 #accommodation-cards-frame {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 1.5em;
+  grid-column-gap: 1.5em;
+  grid-row-gap: 2em;
+}
+/** POINTS DE RUPTURE RESPONSIVE **/
+@media all and (max-width: 1122px) {
+  #accommodation-cards-frame {
+    grid-row-gap: 3em;
+  }
+}
+@media all and (max-width: 1024px) {
+  #accommodation-cards-frame {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    grid-row-gap: 2em;
+  }
 }
 /* SECTION 1 - CARTES */
 .accommodation-card {
@@ -218,13 +467,46 @@ h3 {
   height: 6.5em;
   object-fit: cover;
 }
+/** POINTS DE RUPTURE RESPONSIVE **/
+@media all and (max-width: 1122px) {
+  .accommodation-card img {
+    height: 8.5em;
+  }
+}
+@media all and (max-width: 1091px) {
+  .accommodation-card img {
+    height: 9.5em;
+  }
+}
+@media all and (max-width: 1024px) {
+  .accommodation-card img {
+    height: min-content;
+  }
+}
+@media all and (max-width: 425px) {
+  .accommodation-card img {
+    height: 7em;
+  }
+}
+@media all and (max-width: 375px) {
+  .accommodation-card img {
+    height: 6em;
+  }
+}
 .description-card {
   margin-top: -5px;
   margin-bottom: 0px;
   margin-left: 1em;
 }
+/** POINTS DE RUPTURE RESPONSIVE **/
+@media all and (max-width: 1190px) {
+  .description-card {
+    margin-left: 0.5em;
+  }
+}
 .range {
   font-size: 0.9em;
+  margin-bottom: auto;
 }
 .low-price {
   font-weight: bold;
@@ -240,7 +522,12 @@ h3 {
   font-weight: bold;
   margin-top: 2.5em;
 }
-
+/** POINTS DE RUPTURE RESPONSIVE **/
+@media all and (max-width: 1173px) {
+  #accommodations-list p {
+    margin: auto 0;
+  }
+}
 /******************* MAIN - SECTION 2 - POPULAIRES *******************/
 #popular-accommodations {
   background-color: #f2f2f2;
@@ -251,21 +538,43 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-#popular-header {
+/** POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1111px) {
+  #popular-accommodations {
+    padding: 1em 2em 2em 2em;
+  }
+}
+@media all and (max-width: 1024px) {
+  #popular-accommodations {
+    border-radius: 0px;
+  }
+}
+#popular-accommodations header {
   display: flex;
   align-items: baseline;
+  padding-left: 0;
+  padding-right: 0;
 }
 #popular-header h1 {
-  width: 90%;
+  width: 100%;
 }
-#chart {
-  width: 10%;
+/** POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1111px) {
+  #chart {
+    align-self: center;
+  }
 }
 #popular-cards-frame {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 2em;
+}
+/** POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1105px) {
+  #popular-cards-frame {
+    grid-gap: 1em;
+  }
 }
 /* SECTION 2 - CARTES */
 .popular-card {
@@ -281,11 +590,51 @@ h3 {
   height: 8em;
   object-fit: cover;
 }
+/** POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1173px) {
+  .popular-card img {
+    height: 9em;
+  }
+}
+@media all and (max-width: 1122px) {
+  .popular-card img {
+    height: 10em;
+  }
+}
+@media all and (max-width: 1105px) {
+  .popular-card img {
+    height: 11em;
+  }
+}
+@media all and (max-width: 1024px) {
+  .popular-card img {
+    height: 8em;
+  }
+}
+@media all and (max-width: 350px) {
+  .popular-card img {
+    height: 10em;
+  }
+}
 .popular-description-card {
   margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/** POINTS DE RUPTURE RESPONSIVE **/
+@media all and (max-width: 1190px) {
+  .popular-description-card {
+    margin-left: 0.5em;
+  }
+}
+@media all and (max-width: 1024px) {
+  .popular-description-card {
+    margin-left: 1em;
+  }
 }
 .rating-row {
-  margin-top: 1.5em;
+  margin-bottom: auto;
 }
 .popular-card .fas {
   color: #0065fc;
@@ -301,17 +650,41 @@ h3 {
   padding-left: 2em;
   padding-right: 2em;
 }
+/**POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 767px) {
+  #activities {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+#activities h3 {
+  margin-bottom: 0;
+}
 #activities-cards-frame {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 2em;
 }
+
 .activities-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: baseline;
+}
+/**POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1024px) {
+  #activities-cards-frame {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 2em;
+  }
+  .activities-column {
+    display: grid;
+    grid-row-gap: 2em;
+  }
 }
 .activities-description-card {
   margin: 1em 1em 0em 1em;
@@ -328,6 +701,12 @@ h3 {
   width: 100%;
   height: 23em;
   object-fit: cover;
+}
+/**POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1024px) {
+  #port-activities-card img {
+    height: 10em;
+  }
 }
 /* SECTION 3 - CARTE FORT */
 #fort-activities-card {
@@ -353,6 +732,12 @@ h3 {
   height: 7em;
   object-fit: cover;
 }
+/**POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1024px) {
+  #îles-activities-card img {
+    height: 10em;
+  }
+}
 /* SECTION 3 - CARTE PARC NATIONAL */
 #parcn-activities-card {
   background-color: white;
@@ -364,6 +749,17 @@ h3 {
   width: 100%;
   height: 23em;
   object-fit: cover;
+}
+/** POINTS DE RUPTURE **/
+@media all and (max-width: 1184px) {
+  #parcn-activities-card img {
+    height: 22em;
+  }
+}
+@media all and (max-width: 1024px) {
+  #parcn-activities-card img {
+    height: 10em;
+  }
 }
 /* SECTION 3 - CARTE NOTRE DAME */
 #dame-activities-card {
@@ -377,6 +773,12 @@ h3 {
   height: 8.5em;
   object-fit: cover;
 }
+/**POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1024px) {
+  #dame-activities-card img {
+    height: 10em;
+  }
+}
 /* SECTION 3 - CARTE PARC */
 #parc-activities-card {
   background-color: white;
@@ -389,37 +791,36 @@ h3 {
   height: 8.5em;
   object-fit: cover;
 }
+/**POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 1024px) {
+  #parc-activities-card img {
+    height: 10em;
+  }
+}
 /******************* FOOTER *******************/
 footer {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: #f2f2f2;
-  width: 95%;
-  margin: 2em 0em -1em -1em;
-  padding: 1em 2.5em;
+  margin: 4em -0.5em -1em -1em;
+  padding: 1em 2.3em;
 }
 footer p {
   margin-bottom: 0;
 }
-/* FOOTER - À PROPOS */
-#about {
+footer div {
   display: flex;
   flex-direction: column;
   width: 30%;
   margin: 0.5em;
 }
-/* FOOTER - NOS HÉBERGEMENTS */
-#our-accommodations {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin: 0.5em;
-}
-/* FOOTER - ASSISTANCE */
-#assistance {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  margin: 0.5em;
+/**POINTS DE RUPTURES RESPONSIVE **/
+@media all and (max-width: 600px) {
+  footer {
+    flex-direction: column;
+  }
+  footer div {
+    width: 100%;
+  }
 }

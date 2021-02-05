@@ -29,6 +29,7 @@
         <meta property="og:description" content="Trouver son hébergement et des activités pour des vacances de rêve"/>
     </head>
     <body>
+        <div id="bloc-page">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -39,12 +40,16 @@
                         <img src="images/logo/Reservia.svg" alt="logo Reservia" title="Reservia.com"/>
                     </div>
                     <ul> <!--MENU-->
-                        <li><a href="#accommodations" id="accommodations-link">Hébergements</a></li>
+                        <li id="accommodations-item"><a href="#accommodations" id="accommodations-link">Hébergements</a></li>
                         <li><a href="#activities" id="activities-link">Activités</a></li>
-                        <li><a href="#" id="signup-link">S'inscrire</a></li>
                     </ul>
+                    <div id="signup">
+                        <a href="#" id="signup-link">S'inscrire</a>
+                    </div>
                 </nav>
-                <div> <!------ RECHERCHE ------>
+                
+            <!------ RECHERCHE ------>    
+                <div id="search"> 
                 <!--GRANDS TITRES-->
                     <h1>Trouver votre hébergement pour des vacances de rêve</h1>
                     <h2>En plein centre ville ou en pleine nature</h2>
@@ -52,11 +57,22 @@
                     <form action="" method="post" id="search-zone">
                         <p>
                         <!--ICONE MAP-->
-                            <label for="map"><button type="submit" id="map"><i class="fas fa-map-marker-alt fa-lg"></i></button></label>
+                            <label for="map">
+                                <button type="button" name="map" id="map">
+                                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                                </button>
+                            </label>
                         <!--CHAMP DE SAISIE VILLE-->
-                            <input type="text" name="search-destination" id="search-destination" placeholder="Marseille, France" size="25"/>
+                            <label for="search-destination">
+                                <input type="text" name="search-destination" id="search-destination" placeholder="Marseille, France"/>
+                            </label>
                         <!--BOUTON RECHERCHER-->
-                            <input type="submit" value="Rechercher" id="search-button"/>
+                            <label for="search-button">
+                                <button type="submit" name="search-button" id="search-button">
+                                    <span id="text-search-button">Rechercher</span>
+                                    <i class="fas fa-search fa-lg"></i>
+                                </button>
+                            </label>
                         </p>
                     </form>
                 <!--FILTRES-->
@@ -65,7 +81,7 @@
                         <div id="filters-buttons-row">
                             <!--BOUTON ÉCONOMIQUE-->
                             <div class="filter-button"><i class="fas fa-money-bill-wave"></i><span class="filter-name">Économique</span></div>
-                                    
+                                        
                             <!--BOUTON FAMILIAL-->
                             <div class="filter-button"><i class="fas fa-child"></i><span class="filter-name">Familial</span></div>
 
@@ -91,10 +107,10 @@
                             <div class="accommodation-card">
                                 <img src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo Auberge Cannebière"/>
                                 <div class="description-card">
-                                        <h3>Auberge la Cannebière</h3>
-                                        <span class="range">Nuit à partir de <span class="low-price">25€</span></span><br/>
-                                    <!--RATING-->
-                                        <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
+                                    <h3>Auberge la Cannebière</h3>
+                                    <span class="range">Nuit à partir de <span class="low-price">25€</span></span><br/>
+                                <!--RATING-->
+                                    <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><span class="rating"><i class="fas fa-star fa-xs"></i></span>
                                 </div>
                             </div>
                         </a>
@@ -161,7 +177,7 @@
                     </div>
                     <p>Afficher plus</p>
                 </section>
-            <!------------------MAIN - SECTION 2 - POPULAIRES------------------>
+                <!------------------MAIN - SECTION 2 - POPULAIRES------------------>
                 <section id="popular-accommodations">
                     <header id="popular-header">
                         <h1>Les plus populaires</h1>
@@ -174,12 +190,12 @@
                             <div class="popular-card">
                                 <img src="images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo Hôtel Soleil"/>
                                 <div class="popular-description-card">
-                                        <h3>Hôtel le Soleil du matin</h3>
-                                        <span class="range">Nuit à partir de 128€</span><br/>
-                                    <!--RATING-->
-                                        <div class="rating-row">
-                                            <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i>
-                                        </div>
+                                    <h3>Hôtel le Soleil du matin</h3>
+                                    <span class="range">Nuit à partir de 128€</span><br/>
+                                <!--RATING-->
+                                    <div class="rating-row">
+                                        <i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i><i class="fas fa-star fa-xs"></i>
+                                    </div>
                                 </div>
                             </div>
                         </a>
@@ -217,89 +233,87 @@
         <!------------------SECTION 3 - ACTIVITÉS------------------>
             <section id="activities">
                 <h1>Activités à Marseille</h1>
-            <!--CARTES ACTIVITÉS-->
-                <div id="activities-cards-frame">
-                <!--CARTE VIEUX PORT-->
-                    <a href="#">
-                        <div id="port-activities-card">
-                            <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du Vieux Port"/>
-                            <div class="activities-description-card">
-                                <h3>Vieux Port</h3>
+                <!--CARTES ACTIVITÉS-->
+                    <div id="activities-cards-frame">
+                    <!--CARTE VIEUX PORT-->
+                        <a href="#">
+                            <div id="port-activities-card">
+                                <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du Vieux Port"/>
+                                <div class="activities-description-card">
+                                    <h3>Vieux Port</h3>
+                                </div>
                             </div>
+                        </a>
+                    <!--CARTE FORT-->
+                        <div class="activities-column">
+                            <a href="#">
+                                <div id="fort-activities-card">
+                                    <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du Fort"/>
+                                    <div class="activities-description-card">
+                                        <h3>Fort de Pomègues</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        <!--CARTE ÎLES-->
+                            <a href="#">
+                                <div id="îles-activities-card">
+                                    <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo des Îles"/>
+                                    <div class="activities-description-card">
+                                        <h3>Îles du Frioul</h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                    
-                <!--CARTE FORT-->
-                    <div class="activities-column">
+                    <!--CARTE PARC NATIONAL-->
                         <a href="#">
-                            <div id="fort-activities-card">
-                                <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du Fort"/>
+                            <div id="parcn-activities-card">
+                                <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo du Parc National"/>
                                 <div class="activities-description-card">
-                                    <h3>Fort de Pomègues</h3>
+                                    <h3>Parc National des Calanques</h3>
                                 </div>
                             </div>
                         </a>
-                    <!--CARTE ÎLES-->
-                        <a href="#">
-                            <div id="îles-activities-card">
-                                <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo des Îles"/>
-                                <div class="activities-description-card">
-                                    <h3>Îles du Frioul</h3>
+                        <div class="activities-column">
+                    <!--CARTE NOTRE DAME-->
+                            <a href="#">
+                                <div id="dame-activities-card">
+                                    <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo de Notre-Dame"/>
+                                    <div class="activities-description-card">
+                                        <h3>Notre-Dame-de-la-Garde</h3>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                <!--CARTE PARC NATIONAL-->
-                    <a href="#">
-                        <div id="parcn-activities-card">
-                            <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo du Parc National"/>
-                            <div class="activities-description-card">
-                                <h3>Parc National des Calanques</h3>
-                            </div>
+                            </a>
+                        <!--CARTE PARC-->
+                            <a href="#">
+                                <div id="parc-activities-card">
+                                    <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo du Parc Longchamp"/>
+                                    <div class="activities-description-card">
+                                        <h3>Parc Longchamp</h3>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                    <div class="activities-column">
-                <!--CARTE NOTRE DAME-->
-                        <a href="#">
-                            <div id="dame-activities-card">
-                                <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo de Notre-Dame"/>
-                                <div class="activities-description-card">
-                                    <h3>Notre-Dame-de-la-Garde</h3>
-                                </div>
-                            </div>
-                        </a>
-                    <!--CARTE PARC-->
-                        <a href="#">
-                            <div id="parc-activities-card">
-                                <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo du Parc Longchamp"/>
-                                <div class="activities-description-card">
-                                    <h3>Parc Longchamp</h3>
-                                </div>
-                            </div>
-                        </a>
                     </div>
-                </div>
-            </section>
-        <!------------------FOOTER------------------>
-            <footer>
-                <div id="about">
-                    <h3>A propos</h3>
-                    <p>Fonctionnement du site</p>
-                    <p>Conditions générales de vente</p>
-                    <p>Données et confidentialité</p>
-                </div>
-                <div id="our-accommodations">
-                    <h3>Nos hébergements</h3>
-                    <p>Charte qualité</p>
-                    <p>Soumettre votre hôtel</p>
-                </div>
-                <div id="assistance">
-                    <h3>Assistance</h3>
-                    <p>Centre d'aide</p>
-                    <p>Nous contacter</p>
-                </div>
-            </footer>
-        
-    
+                </section>
+            <!------------------FOOTER------------------>
+                <footer>
+                    <div id="about">
+                        <h3>A propos</h3>
+                        <p>Fonctionnement du site</p>
+                        <p>Conditions générales de vente</p>
+                        <p>Données et confidentialité</p>
+                    </div>
+                    <div id="our-accommodations">
+                        <h3>Nos hébergements</h3>
+                        <p>Charte qualité</p>
+                        <p>Soumettre votre hôtel</p>
+                    </div>
+                    <div id="assistance">
+                        <h3>Assistance</h3>
+                        <p>Centre d'aide</p>
+                        <p>Nous contacter</p>
+                    </div>
+                </footer>
+        </div>
     </body>
 </html>
