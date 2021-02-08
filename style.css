@@ -9,13 +9,12 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
 /******************* HEADER *******************/
 header {
   padding-left: 2em;
   padding-right: 2em;
 }
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (max-width: 768px) {
   header {
     padding-left: 1em;
@@ -28,13 +27,11 @@ header {
     padding-right: 0;
   }
 }
-/* HEARDER - NAV */
 nav {
   display: flex;
   margin-bottom: 30px;
-  width: 100%;
 }
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (max-width: 480px) {
   nav {
     display: grid;
@@ -45,34 +42,28 @@ nav {
     grid-template-rows: repeat(2, 1fr);
   }
 }
-/* HEARDER - NAV - LOGO */
 nav #logo {
   width: 70%;
   padding-top: 20px;
 }
-/** POINTS DE RUPTURE **/
-@media all and (max-width: 1024px) {
-  nav #logo {
-    width: 50%;
-  }
-}
+/** RESPONSIVE **/
 @media all and (max-width: 480px) {
   nav #logo {
     grid-area: logo;
     width: 100%;
   }
 }
-/* HEARDER - NAV - MENU */
+/* MENU */
 nav ul {
   list-style-type: none;
-  width: 20%;
   margin: auto;
   display: flex;
   justify-content: space-around;
 }
-@media all and (min-width: 690px) and (max-width: 1024px) {
+/** RESPONSIVE **/
+@media all and (min-width: 1199px) {
   nav ul {
-    width: 30%;
+    min-width: 20%;
   }
 }
 @media all and (min-width: 481px) and (max-width: 689px) {
@@ -85,11 +76,11 @@ nav ul {
     display: contents;
   }
 }
-/* HEARDER - NAV - MENU - HÉBERGEMENTS */
+/* MENU - HÉBERGEMENTS */
 #accommodations-link {
   color: #0065fc;
 }
-/* POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (min-width: 481px) {
   #accommodations-link {
     border-top: 2px solid #0065fc;
@@ -104,13 +95,13 @@ nav ul {
     text-align: center;
   }
 }
-/* HEARDER - NAV - MENU - ACTIVITÉS */
+/* MENU - ACTIVITÉS */
 #activities-link {
   color: black;
   padding-left: 20px;
   padding-right: 20px;
 }
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (min-width: 481px) {
   #activities-link {
     padding-top: 31px;
@@ -122,10 +113,11 @@ nav ul {
     grid-area: activities;
   }
 }
+/* MENU - LIENS */
 nav a:hover {
   color: #0065fc;
 }
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (min-width: 481px) {
   nav a:hover {
     border-top: 2px solid #0065fc;
@@ -138,11 +130,11 @@ nav a:hover {
     padding-bottom: 10px;
   }
 }
-/* HEARDER - NAV - MENU - S'INSCRIRE */
+/* MENU - S'INSCRIRE */
 #signup {
   margin: auto;
 }
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (max-width: 480px) {
   #signup {
     grid-area: signup;
@@ -155,16 +147,15 @@ nav a:hover {
   padding-left: 10px;
   padding-right: 10px;
 }
-
 /* HEARDER - RECHERCHE */
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (max-width: 768px) {
   #search {
     padding-left: 1em;
     padding-right: 1em;
   }
 }
-/* HEARDER - RECHERCHE - GRANDS TITRES */
+/* GRANDS TITRES */
 header h1 {
   font-size: 1.4em;
 }
@@ -173,69 +164,67 @@ header h2 {
   font-size: medium;
   margin-top: -10px;
 }
-/* HEARDER - RECHERCHE - FORM RECHERCHE */
+/* FORM RECHERCHE */
 #search-zone {
   margin-top: 20px;
 }
 #search-zone p {
   font-weight: bold;
 }
-/* HEARDER - RECHERCHE - FORM RECHERCHE - ICONE MAP */
+/* FORM RECHERCHE - ICONE MAP */
 #map {
   background-color: #f2f2f2;
-  border: 1px solid transparent;
+  border: 1px solid #f2f2f2;
   border-radius: 10px 0px 0px 10px;
-  padding: 17px;
-  padding-bottom: 16px;
+  padding: 25px 20px 21px 20px;
   margin-right: -5px;
 }
-/* HEARDER - RECHERCHE - FORM RECHERCHE - CHAMP DE SAISIE VILLE */
+/* FORM RECHERCHE - CHAMP DE SAISIE VILLE */
 #search-destination {
-  border: thin solid #f2f2f2;
-  padding: 15px;
-  padding-bottom: 15px;
+  border: 1px solid #f2f2f2;
+  padding: 20px;
   margin-right: -5px;
   font-size: medium;
-  width: 20%;
+  min-width: min-content;
+  width: 14%;
+}
+/** RESPONSIVE **/
+@media all and (min-width: 501px) and (max-width: 768px) {
+  #search-destination {
+    min-width: 29%;
+  }
+}
+@media all and (min-width: 376px) and (max-width: 500px) {
+  #search-destination {
+    min-width: 49%;
+    width: 43%;
+  }
+}
+@media all and (min-width: 321px) and (max-width: 375px) {
+  #search-destination {
+    min-width: 45%;
+    width: 49%;
+    max-width: min-content;
+  }
+}
+@media all and (min-width: 280px) and (max-width: 320px) {
+  #search-destination {
+    min-width: 36%;
+    width: 45%;
+    max-width: min-content;
+  }
 }
 #search-destination::placeholder {
   color: black;
   font-size: medium;
   font-weight: 500;
 }
-/** POINTS DE RUPTURE **/
-@media all and (min-width: 600px) and (max-width: 768px) {
-  #search-destination {
-    width: 31%;
-  }
-}
-@media all and (min-width: 500px) and (max-width: 599px) {
-  #search-destination {
-    width: 43%;
-  }
-}
-@media all and (min-width: 386px) and (max-width: 500px) {
-  #search-destination {
-    width: 60%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 385px) {
-  #search-destination {
-    width: 55%;
-  }
-}
-@media all and (min-width: 280px) and (max-width: 319px) {
-  #search-destination {
-    width: 47%;
-  }
-}
-/* HEARDER - RECHERCHE - FORM RECHERCHE - BOUTON RECHERCHER */
+/* FORM RECHERCHE - BOUTON RECHERCHER */
 #search-button {
   background-color: #0065fc;
   border: 1px solid transparent;
   border-radius: 0px 10px 10px 0px;
-  padding: 15px;
-  padding-bottom: 15px;
+  padding: 20px;
   font-weight: 500;
   color: white;
   font-size: medium;
@@ -243,7 +232,7 @@ header h2 {
 #search-button .fas {
   display: none;
 }
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (max-width: 500px) {
   #search-button {
     border-radius: 15px;
@@ -257,7 +246,7 @@ header h2 {
     align-self: center;
   }
 }
-/* HEARDER - RECHERCHE - FORM FILTRES */
+/* FORM FILTRES */
 #filters {
   display: flex;
   margin-top: 20px;
@@ -269,7 +258,7 @@ header h2 {
   font-size: medium;
   margin-right: 20px;
 }
-/* HEARDER - RECHERCHE - FORM FILTRES - BOUTONS */
+/* FORM FILTRES - BOUTONS */
 #filters-buttons-row {
   display: flex;
   justify-content: space-around;
@@ -289,7 +278,7 @@ header h2 {
   padding-left: 10px;
   padding-right: 20px;
 }
-/******** POINTS DE RUPTURE *********/
+/** RESPONSIVE **/
 @media all and (max-width: 1080px) {
   #filters-buttons-row {
     flex-wrap: wrap;
@@ -345,7 +334,7 @@ header h2 {
   margin-left: -5px;
   margin-right: 10px;
 }
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (max-width: 768px) {
   #info {
     margin-left: 0.5em;
@@ -359,7 +348,7 @@ main {
   padding-left: 2em;
   padding-right: 2em;
 }
-/** POINTS DE RUPTURE RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1173px) {
   main {
     grid-template-columns: 67% 1fr;
@@ -412,7 +401,7 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-/** POINTS DE RUPTURE RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1190px) {
   #accommodations-list {
     padding-bottom: 0;
@@ -424,11 +413,13 @@ h3 {
     margin-top: 0;
   }
 }
-@media all and (max-width: 767) {
+@media all and (max-width: 767px) {
   #accommodations-list {
     background-color: transparent;
     margin-top: 0;
     padding: 0;
+    margin-left: 1em;
+    margin-right: 1em;
   }
 }
 #accommodation-cards-frame {
@@ -438,7 +429,7 @@ h3 {
   grid-column-gap: 1.5em;
   grid-row-gap: 2em;
 }
-/** POINTS DE RUPTURE RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1122px) {
   #accommodation-cards-frame {
     grid-row-gap: 3em;
@@ -452,7 +443,7 @@ h3 {
     grid-row-gap: 2em;
   }
 }
-/* SECTION 1 - CARTES */
+/* HÉBERGEMENTS - CARTES */
 .accommodation-card {
   background-color: white;
   border: 5px solid transparent;
@@ -467,7 +458,7 @@ h3 {
   height: 6.5em;
   object-fit: cover;
 }
-/** POINTS DE RUPTURE RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1122px) {
   .accommodation-card img {
     height: 8.5em;
@@ -480,7 +471,7 @@ h3 {
 }
 @media all and (max-width: 1024px) {
   .accommodation-card img {
-    height: min-content;
+    height: 10.5em;
   }
 }
 @media all and (max-width: 425px) {
@@ -498,7 +489,7 @@ h3 {
   margin-bottom: 0px;
   margin-left: 1em;
 }
-/** POINTS DE RUPTURE RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1190px) {
   .description-card {
     margin-left: 0.5em;
@@ -517,12 +508,11 @@ h3 {
 .rating .fas {
   color: #f2f2f2;
 }
-
 #accommodations-list p {
   font-weight: bold;
   margin-top: 2.5em;
 }
-/** POINTS DE RUPTURE RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1173px) {
   #accommodations-list p {
     margin: auto 0;
@@ -538,7 +528,7 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-/** POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1111px) {
   #popular-accommodations {
     padding: 1em 2em 2em 2em;
@@ -547,6 +537,14 @@ h3 {
 @media all and (max-width: 1024px) {
   #popular-accommodations {
     border-radius: 0px;
+    padding: 1em 2.5em 2em 3em;
+    margin-left: -1em;
+    margin-right: -0.5em;
+  }
+}
+@media all and (max-width: 767px) {
+  #popular-accommodations {
+    padding: 1em 1.5em 2em 2em;
   }
 }
 #popular-accommodations header {
@@ -558,7 +556,7 @@ h3 {
 #popular-header h1 {
   width: 100%;
 }
-/** POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1111px) {
   #chart {
     align-self: center;
@@ -570,13 +568,13 @@ h3 {
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 2em;
 }
-/** POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1105px) {
   #popular-cards-frame {
     grid-gap: 1em;
   }
 }
-/* SECTION 2 - CARTES */
+/* POPULAIRES - CARTES */
 .popular-card {
   background-color: white;
   border: 5px solid transparent;
@@ -590,7 +588,7 @@ h3 {
   height: 8em;
   object-fit: cover;
 }
-/** POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1173px) {
   .popular-card img {
     height: 9em;
@@ -608,11 +606,6 @@ h3 {
 }
 @media all and (max-width: 1024px) {
   .popular-card img {
-    height: 8em;
-  }
-}
-@media all and (max-width: 350px) {
-  .popular-card img {
     height: 10em;
   }
 }
@@ -622,7 +615,7 @@ h3 {
   flex-direction: column;
   justify-content: space-between;
 }
-/** POINTS DE RUPTURE RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1190px) {
   .popular-description-card {
     margin-left: 0.5em;
@@ -634,7 +627,7 @@ h3 {
   }
 }
 .rating-row {
-  margin-bottom: auto;
+  margin-bottom: 0.5em;
 }
 .popular-card .fas {
   color: #0065fc;
@@ -650,7 +643,7 @@ h3 {
   padding-left: 2em;
   padding-right: 2em;
 }
-/**POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 767px) {
   #activities {
     padding-left: 1em;
@@ -666,24 +659,23 @@ h3 {
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 2em;
 }
-
 .activities-column {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-/**POINTS DE RUPTURES RESPONSIVE **/
+/**RESPONSIVE **/
 @media all and (max-width: 1024px) {
   #activities-cards-frame {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
     grid-row-gap: 2em;
   }
   .activities-column {
     display: grid;
     grid-row-gap: 2em;
+    justify-content: initial;
   }
 }
 .activities-description-card {
@@ -702,7 +694,7 @@ h3 {
   height: 23em;
   object-fit: cover;
 }
-/**POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1024px) {
   #port-activities-card img {
     height: 10em;
@@ -732,7 +724,7 @@ h3 {
   height: 7em;
   object-fit: cover;
 }
-/**POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1024px) {
   #îles-activities-card img {
     height: 10em;
@@ -750,7 +742,7 @@ h3 {
   height: 23em;
   object-fit: cover;
 }
-/** POINTS DE RUPTURE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1184px) {
   #parcn-activities-card img {
     height: 22em;
@@ -773,7 +765,7 @@ h3 {
   height: 8.5em;
   object-fit: cover;
 }
-/**POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1024px) {
   #dame-activities-card img {
     height: 10em;
@@ -791,7 +783,7 @@ h3 {
   height: 8.5em;
   object-fit: cover;
 }
-/**POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 1024px) {
   #parc-activities-card img {
     height: 10em;
@@ -815,12 +807,15 @@ footer div {
   width: 30%;
   margin: 0.5em;
 }
-/**POINTS DE RUPTURES RESPONSIVE **/
+/** RESPONSIVE **/
 @media all and (max-width: 600px) {
   footer {
     flex-direction: column;
   }
   footer div {
     width: 100%;
+  }
+  footer p {
+    margin-bottom: -0.3em;
   }
 }
