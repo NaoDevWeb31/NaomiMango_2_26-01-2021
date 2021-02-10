@@ -1,13 +1,16 @@
 /******************* PAGE ENTIÈRE *******************/
 body {
   /* POLICE */
-  font-family: "Raleway", Georgia, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
 }
 /* LIENS */
 a {
   color: inherit;
   text-decoration: none;
+}
+strong {
+  font-weight: 500;
 }
 /******************* HEADER *******************/
 header {
@@ -242,7 +245,7 @@ header h2 {
 @media all and (min-width: 320px) and (max-width: 375px) {
   #search-destination {
     min-width: 45%;
-    width: 46%;
+    width: 45%;
   }
 }
 @media all and (min-width: 310px) and (max-width: 319px) {
@@ -320,6 +323,8 @@ header h2 {
   width: fit-content;
   padding-left: 10px;
   padding-right: 20px;
+  display: flex;
+  align-items: baseline;
 }
 /** RESPONSIVE **/
 @media all and (max-width: 1080px) {
@@ -781,12 +786,12 @@ h3 {
   object-fit: cover;
 }
 /* SECTION 3 - CARTE ÎLES */
-#îles-activities-card {
+#islands-activities-card {
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
-#îles-activities-card img {
+#islands-activities-card img {
   border-radius: 20px 20px 0px 0px;
   width: 100%;
   height: 7em;
@@ -794,17 +799,17 @@ h3 {
 }
 /** RESPONSIVE **/
 @media all and (max-width: 1024px) {
-  #îles-activities-card img {
+  #islands-activities-card img {
     height: 10em;
   }
 }
 /* SECTION 3 - CARTE PARC NATIONAL */
-#parcn-activities-card {
+#npark-activities-card {
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
-#parcn-activities-card img {
+#npark-activities-card img {
   border-radius: 20px 20px 0px 0px;
   width: 100%;
   height: 23em;
@@ -812,12 +817,12 @@ h3 {
 }
 /** RESPONSIVE **/
 @media all and (max-width: 1184px) {
-  #parcn-activities-card img {
+  #npark-activities-card img {
     height: 22em;
   }
 }
 @media all and (max-width: 1024px) {
-  #parcn-activities-card img {
+  #npark-activities-card img {
     height: 10em;
   }
 }
@@ -840,12 +845,12 @@ h3 {
   }
 }
 /* SECTION 3 - CARTE PARC */
-#parc-activities-card {
+#park-activities-card {
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
-#parc-activities-card img {
+#park-activities-card img {
   border-radius: 20px 20px 0px 0px;
   width: 100%;
   height: 8.5em;
@@ -853,7 +858,7 @@ h3 {
 }
 /** RESPONSIVE **/
 @media all and (max-width: 1024px) {
-  #parc-activities-card img {
+  #park-activities-card img {
     height: 10em;
   }
 }
