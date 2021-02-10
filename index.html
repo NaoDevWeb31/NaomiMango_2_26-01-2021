@@ -42,7 +42,7 @@
             <!--MENU-->
                 <ul>
                     <li id="accommodations-item"><a href="#accommodations" id="accommodations-link">Hébergements</a></li>
-                    <li><a href="#activities" id="activities-link">Activités</a></li>
+                    <li id="activities-item"><a href="#activities" id="activities-link">Activités</a></li>
                 </ul>
                 <div id="signup">
                     <a href="#" id="signup-link">S'inscrire</a>
@@ -57,22 +57,18 @@
                 <form action="" method="post" id="search-zone">
                     <p>
                     <!--ICONE MAP-->
-                        <label for="map">
-                            <button type="button" name="map" id="map">
-                                <i class="fas fa-map-marker-alt fa-lg"></i>
-                            </button>
-                        </label>
+                        <button type="button" name="map" id="map">
+                            <i class="fas fa-map-marker-alt fa-lg"></i>
+                        </button>
                     <!--CHAMP DE SAISIE VILLE-->
                         <label for="search-destination">
                             <input type="text" name="search-destination" id="search-destination" placeholder="Marseille, France"/>
                         </label>
                     <!--BOUTON RECHERCHER-->
-                        <label for="search-button">
-                            <button type="submit" name="search-button" id="search-button">
-                                <span id="text-search-button">Rechercher</span>
-                                <i class="fas fa-search fa-lg"></i>
-                            </button>
-                        </label>
+                        <button type="submit" name="search-button" id="search-button">
+                            <span id="text-search-button">Rechercher</span>
+                            <i class="fas fa-search fa-lg"></i>
+                        </button>
                     </p>
                 </form>
             <!--FILTRES-->
@@ -80,16 +76,21 @@
                     <p><span id="filters-title">Filtres</span></p>
                     <div id="filters-buttons-row">
                         <!--BOUTON ÉCONOMIQUE-->
-                        <div class="filter-button"><i class="fas fa-money-bill-wave"></i><span class="filter-name">Économique</span></div>
-                                        
+                        <button type="button" name="economic-filter-button" class="filter-button">
+                            <i class="fas fa-money-bill-wave"></i><span class="filter-name">Économique</span>
+                        </button>                
                         <!--BOUTON FAMILIAL-->
-                        <div class="filter-button"><i class="fas fa-child"></i><span class="filter-name">Familial</span></div>
-
+                        <button type="button" name="family-filter-button" class="filter-button">
+                            <i class="fas fa-child"></i><span class="filter-name">Familial</span>
+                        </button>
                         <!--BOUTON ROMANTIQUE-->
-                        <div class="filter-button"><i class="fas fa-heart"></i><span class="filter-name">Romantique</span></div>
-
+                        <button type="button" name="romantic-filter-button" class="filter-button">
+                            <i class="fas fa-heart"></i><span class="filter-name">Romantique</span>
+                        </button>
                         <!--BOUTON ANIMAUX-->
-                        <div class="filter-button"><i class="fas fa-dog"></i><span class="filter-name">Animaux autorisés</span></div>
+                        <button type="button" name="pet-filter-button" class="filter-button">
+                            <i class="fas fa-dog"></i><span class="filter-name">Animaux autorisés</span>
+                        </button>
                     </div>
                 </form>
             </div>
