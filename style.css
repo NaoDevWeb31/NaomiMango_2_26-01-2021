@@ -213,51 +213,45 @@ header h2 {
 }
 #search-zone p {
   font-weight: bold;
+  display: flex;
 }
 /* FORM RECHERCHE - ICONE MAP */
 #map {
   background-color: #f2f2f2;
   border: 1px solid #f2f2f2;
-  border-radius: 10px 0px 0px 10px;
-  padding: 22px 20px 21px 20px;
-  margin-right: -5px;
+  border-radius: 15px 0px 0px 15px;
+  padding: 16px 16px 15px 16px;
+  margin-right: 0;
 }
 /* FORM RECHERCHE - CHAMP DE SAISIE VILLE */
 #search-destination {
   border: 1px solid #f2f2f2;
-  padding: 20px;
-  margin-right: -7px;
+  padding: 14px;
   font-size: medium;
-  min-width: max-content;
-  width: 16%;
+  width: 13em;
+}
+#search-destination:focus {
+  outline-width: thin;
 }
 /** RESPONSIVE **/
-@media all and (min-width: 501px) and (max-width: 768px) {
+@media all and (min-width: 390px) and (max-width: 480px) {
   #search-destination {
-    min-width: 29%;
+    width: 13.5em;
   }
 }
-@media all and (min-width: 376px) and (max-width: 500px) {
+@media all and (min-width: 320px) and (max-width: 355px) {
   #search-destination {
-    min-width: 49%;
-  }
-}
-@media all and (min-width: 320px) and (max-width: 375px) {
-  #search-destination {
-    min-width: 45%;
-    width: 45%;
+    width: 11em;
   }
 }
 @media all and (min-width: 310px) and (max-width: 319px) {
   #search-destination {
-    min-width: 36%;
-    width: 44%;
+    width: 10em;
   }
 }
-@media all and (min-width: 280px) and (max-width: 309px) {
+@media all and (max-width: 309px) {
   #search-destination {
-    min-width: 36%;
-    width: 36%;
+    width: 8em;
   }
 }
 #search-destination::placeholder {
@@ -269,20 +263,21 @@ header h2 {
 #search-button {
   background-color: #0065fc;
   border: 1px solid transparent;
-  border-radius: 0px 10px 10px 0px;
-  padding: 20px;
+  border-radius: 0px 15px 15px 0px;
+  padding: 14px;
   font-weight: 500;
   color: white;
   font-size: medium;
+  margin-left: 0;
 }
 #search-button .fas {
   display: none;
 }
 /** RESPONSIVE **/
-@media all and (max-width: 500px) {
+@media all and (max-width: 480px) {
   #search-button {
     border-radius: 15px;
-    margin-left: -10px;
+    margin-left: -0.7em;
   }
   #text-search-button {
     display: none;
@@ -321,8 +316,7 @@ header h2 {
   border-radius: 50px;
   text-align: center;
   width: fit-content;
-  padding-left: 10px;
-  padding-right: 20px;
+  padding: 0px 20px 0px 10px;
   display: flex;
   align-items: baseline;
 }
@@ -356,11 +350,16 @@ header h2 {
 }
 .filter-button:hover {
   background-color: #deebff;
-  flex-grow: 0.1;
+  color: #0065fc;
+  border-color: #0065fc;
+  padding-left: 12.5px;
 }
 .filter-button:active {
   background-color: #0065fc;
   color: white;
+}
+.filter-button:focus {
+  outline: none;
 }
 #filters .fas {
   background-color: #deebff;
@@ -868,8 +867,8 @@ footer {
   justify-content: space-around;
   flex-wrap: wrap;
   background-color: #f2f2f2;
-  margin: 4em -0.5em -1em -1em;
-  padding: 1em 2.3em;
+  margin: 4em -0.5em -1em -0.5em;
+  padding: 1em 1.5em;
 }
 footer p {
   margin-bottom: 0;
@@ -886,7 +885,7 @@ footer div {
     flex-direction: column;
   }
   footer div {
-    width: 100%;
+    width: auto;
   }
   footer p {
     margin-bottom: -0.3em;
