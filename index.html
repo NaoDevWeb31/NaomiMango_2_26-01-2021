@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html lang="fr">
     <head>
-    <!-- Metatags, links to stylesheets -->
+    <!-- Metatags, infos du site, liens vers stylesheets -->
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <title>Reservia | Hébergements vacances, activités</title>
         <link rel="stylesheet" href="style.css"/>
+        <link rel="icon" href="images/logo/Reservia.svg">
         <meta name="description" content="Trouver son hébergement et des activités pour des vacances de rêve"/>
     <!-- Liens icônes, polices -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
@@ -22,19 +19,18 @@
         <meta property="og:title" content="Reservia | Hébergements vacances, activités"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="http://www.reservia.com/"/>
-        <meta property="og:image" content="http://example.com/image.jpg"/>
+        <meta property="og:image" content="http://reservia.com/image.jpg"/>
         <meta property="og:description" content="Trouver son hébergement et des activités pour des vacances de rêve"/>
     </head>
     <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
     <!------------------HEADER------------------>
         <header>
             <nav>
             <!--LOGO-->
                 <div id="logo">
-                    <img src="images/logo/Reservia.svg" alt="logo Reservia" title="Reservia.com"/>
+                    <a href="index.html">
+                        <img src="images/logo/Reservia.svg" alt="logo Reservia" title="Reservia.com"/>
+                    </a>
                 </div>
             <!--MENU-->
                 <ul>
@@ -51,7 +47,7 @@
                 <h1>Trouver votre hébergement pour des vacances de rêve</h1>
                 <h2>En plein centre ville ou en pleine nature</h2>
             <!--ZONE DE RECHERCHE-->
-                <form action="" method="post" id="search-zone">
+                <form action="#" method="post" id="search-zone">
                     <p>
                     <!--ICONE MAP-->
                         <button type="button" name="map" id="map">
@@ -69,7 +65,7 @@
                     </p>
                 </form>
             <!--FILTRES-->
-                <form action="" method="POST" id="filters">
+                <form action="#" method="POST" id="filters">
                     <p><span id="filters-title">Filtres</span></p>
                     <div id="filters-buttons-row">
                         <!--BOUTON ÉCONOMIQUE-->
@@ -103,7 +99,9 @@
                 <!--CARTE AUBERGE-->                        
                     <a href="#">
                         <div class="accommodation-card">
-                            <img src="images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo de l'auberge la Cannebière"/>
+                            <img srcset="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg 750w, images/hebergements/3_medium/marcus-loke-WQJvWU_HZFo-unsplash.jpg 1499w"
+                            sizes="(max-width: 767px) 707px,(max-width: 1024px) 932px, (max-width: 1440px) 251px, 779px"
+                            src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo de l'auberge la Cannebière"/>
                             <div class="description-card">
                                 <h3>Auberge la Cannebière</h3>
                                 <span class="range">Nuit à partir de <span class="low-price">25€</span></span><br/>
@@ -115,7 +113,9 @@
                 <!--CARTE PORT-->
                     <a href="#">
                         <div class="accommodation-card">
-                            <img src="images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo de l'hôtel du port"/>
+                            <img srcset="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg 684w, images/hebergements/3_medium/fred-kleber-gTbaxaVLvsg-unsplash.jpg 1368w"
+                            sizes="(max-width: 744px) 684px, (max-width: 1024px) 932px, (max-width: 1440px) 251px, 779px"
+                            src="mages/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo de l'hôtel du port"/>
                             <div class="description-card">
                                 <h3>Hôtel du port</h3>
                                 <span class="range">Nuit à partir de 52<strong>€</strong></span><br/>
@@ -127,7 +127,9 @@
                 <!--CARTE MOUETTES-->
                     <a href="#">
                         <div class="accommodation-card">
-                            <img src="images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo de l'hôtel les mouettes"/>
+                            <img srcset="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg 750w, images/hebergements/3_medium/reisetopia-B8WIgxA_PFU-unsplash.jpg 1500w"
+                            sizes="(max-width: 767px) 707px, (max-width: 1024px) 932px, (max-width: 1440px) 251px, 779px"
+                            src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo de l'hôtel les mouettes"/>
                             <div class="description-card">
                                 <h3>Hôtel Les mouettes</h3>
                                 <span class="range">Nuit à partir de 76<strong>€</strong></span><br/>
@@ -139,7 +141,9 @@
                 <!--CARTE MER-->
                     <a href="#">
                         <div class="accommodation-card">
-                            <img src="images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo de l'hôtel de la mer"/>
+                            <img srcset="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg 500w, images/hebergements/3_medium/annie-spratt-Eg1qcIitAuA-unsplash.jpg 1000w"
+                            sizes="(max-width: 560px) 500px, (max-width: 1024px) 932px, (max-width: 1440px) 251px, 779px"
+                            src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo de l'hôtel de la mer"/>
                             <div class="description-card">
                                 <h3>Hôtel de la mer</h3>
                                 <span class="range">Nuit à partir de 46<strong>€</strong></span><br/>
@@ -151,7 +155,9 @@
                 <!--CARTE PANIER-->
                     <a href="#">
                         <div class="accommodation-card">
-                            <img src="images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo de l'auberge Le Panier"/>
+                            <img srcset="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg 652w, images/hebergements/3_medium/nicate-lee-kT-ZyaiwBe0-unsplash.jpg 1303w"
+                            sizes="(max-width: 712px) 652px, (max-width: 1024px) 932px, (max-width: 1440px) 251px, 779px"
+                            src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo de l'auberge Le Panier"/>
                             <div class="description-card">
                                 <h3>Auberge Le Panier</h3>
                                 <span class="range">Nuit à partir de <span class="low-price">23€</span></span><br/>
@@ -163,7 +169,9 @@
                 <!--CARTE AMINA-->
                     <a href="#">
                         <div class="accommodation-card">
-                            <img src="images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo de l'hôtel chez Amina"/>
+                            <img srcset="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg 486w, images/hebergements/3_medium/febrian-zakaria-M6S1WvfW68A-unsplash.jpg 972w"
+                            sizes="(max-width: 546px) 486px, (max-width: 1024px) 932px, (max-width: 1440px) 251px, 779px"
+                            src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo de l'hôtel chez Amina"/>
                             <div class="description-card">
                                 <h3>Hôtel chez Amina</h3>
                                 <span class="range">Nuit à partir de 96<strong>€</strong></span><br/>
@@ -173,7 +181,7 @@
                         </div>
                     </a>
                 </div>
-                <p>Afficher plus</p>
+                <p><a href=""> Afficher plus</a></p>
             </section>
             <!------------------MAIN - SECTION 2 - POPULAIRES------------------>
             <section id="popular-accommodations">
@@ -186,7 +194,7 @@
                 <!--CARTE HÔTEL SOLEIL-->
                     <a href="#">
                         <div class="popular-card">
-                            <img src="images/hebergements/3_medium/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo de l'hôtel le Soleil du matin"/>
+                            <img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo de l'hôtel le Soleil du matin"/>
                             <div class="popular-description-card">
                                 <h3>Hôtel le Soleil du matin</h3>
                                 <span class="range">Nuit à partir de 128<strong>€</strong></span><br/>
@@ -200,7 +208,7 @@
                 <!--CARTE CHAMBRES D'HÔTES-->
                     <a href="#">
                         <div class="popular-card">
-                            <img src="images/hebergements/3_medium/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo d'Au cœur de l'eau Chambres d'hôtes"/>
+                            <img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo d'Au cœur de l'eau Chambres d'hôtes"/>
                             <div class="popular-description-card">
                                 <h3>Au cœur de l'eau Chambres d'hôtes</h3>
                                 <span class="range">Nuit à partir de 71<strong>€</strong></span><br/>                                <!--RATING-->
@@ -213,7 +221,7 @@
                 <!--CARTE BLEU ET BLANC-->
                     <a href="#">
                         <div class="popular-card">
-                            <img src="images/hebergements/3_medium/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo de l'hôtel Tout bleu et Blanc"/>
+                            <img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo de l'hôtel Tout bleu et Blanc"/>
                             <div class="popular-description-card">
                                 <h3>Hôtel Tout bleu et Blanc</h3>
                                 <span class="range">Nuit à partir de 68<strong>€</strong></span><br/>
@@ -235,7 +243,9 @@
             <!--CARTE VIEUX PORT-->
                 <a href="#">
                     <div id="port-activities-card">
-                        <img src="images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du quartier du Vieux Port"/>
+                        <img srcset="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg 702w, images/activites/3_medium/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg 1404w"
+                        sizes="(max-width: 767px) 719px, (max-width: 1024px) 944px, (max-width: 1440px) 316px, 1404px"
+                        src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Photo du quartier du Vieux Port"/>
                         <div class="activities-description-card">
                             <h3>Vieux Port</h3>
                         </div>
@@ -245,7 +255,9 @@
                 <!--CARTE FORT-->
                     <a href="#">
                         <div id="fort-activities-card">
-                            <img src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du fort de Pomègues"/>
+                            <img srcset="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg 356w, images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg 711w, images/activites/2_large/paul-hermann-QFTrLdQIRhI-unsplash.jpg 1422w"
+                            sizes="(max-width: 404px) 356px, (max-width: 759px) 711px, (max-width: 1024px) 944px, (max-width: 1440px) 316px, 1422px"
+                            src="images/activites/3_medium/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Photo du fort de Pomègues"/>
                             <div class="activities-description-card">
                                 <h3>Fort de Pomègues</h3>
                             </div>
@@ -254,7 +266,9 @@
                 <!--CARTE ÎLES-->
                     <a href="#">
                         <div id="islands-activities-card">
-                            <img src="images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo des Îles du Frioul"/>
+                            <img srcset="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg 648w, images/activites/3_medium/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg 1296w"
+                            sizes="(max-width: 696px) 648px, (max-width: 1024px) 944px, (max-width: 1440px) 316px, 916px"
+                            src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Photo des Îles du Frioul"/>
                             <div class="activities-description-card">
                                 <h3>Îles du Frioul</h3>
                             </div>
@@ -264,7 +278,9 @@
             <!--CARTE PARC NATIONAL-->
                 <a href="#">
                     <div id="npark-activities-card">
-                        <img src="images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo du parc national des Calanques"/>
+                        <img srcset="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg 606w, images/activites/3_medium/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg 1212w"
+                        sizes="(max-width: 654px) 606px, (max-width: 1024px) 944px, (max-width: 1440px) 316px, 916px"
+                        src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Photo du parc national des Calanques"/>
                         <div class="activities-description-card">
                             <h3>Parc National des Calanques</h3>
                         </div>
@@ -274,7 +290,9 @@
                 <!--CARTE NOTRE DAME-->
                     <a href="#">
                         <div id="dame-activities-card">
-                            <img src="images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo de la basilique Notre-Dame-de-la-Garde"/>
+                            <img srcset="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg 589w, images/activites/3_medium/florian-wehde-xW9e8gdotxI-unsplash.jpg 1178w"
+                            sizes="(max-width: 637px) 589px, (max-width:1024px) 944px, (max-width: 1440px) 316px, 916px"
+                            src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Photo de la basilique Notre-Dame-de-la-Garde"/>
                             <div class="activities-description-card">
                                 <h3>Notre-Dame-de-la-Garde</h3>
                             </div>
@@ -283,7 +301,9 @@
                     <!--CARTE PARC-->
                     <a href="#">
                         <div id="park-activities-card">
-                            <img src="images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo du parc Longchamp"/>
+                            <img srcset="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg 504w, images/activites/3_medium/lena-paulin-wH2-EJoDcV0-unsplash.jpg 1008w"
+                            sizes="(max-width: 552px) 504px, (max-width: 1024px) 944px, (max-width: 1440px) 316px, 916px"
+                            src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Photo du parc Longchamp"/>
                             <div class="activities-description-card">
                                 <h3>Parc Longchamp</h3>
                             </div>
