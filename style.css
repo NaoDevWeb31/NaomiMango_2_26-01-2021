@@ -217,9 +217,6 @@ header h2 {
   padding: 16px 16px 15px 16px;
   margin-right: 0;
 }
-.visually-hidden {
-  display: none;
-}
 /* FORM RECHERCHE - CHAMP DE SAISIE VILLE */
 #search-destination {
   border: 1px solid #f2f2f2;
@@ -254,6 +251,9 @@ header h2 {
 }
 #search-destination:focus {
   outline-width: thin;
+}
+label {
+  display: none;
 }
 /* FORM RECHERCHE - BOUTON RECHERCHER */
 #search-button {

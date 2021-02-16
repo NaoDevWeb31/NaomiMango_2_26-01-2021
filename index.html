@@ -50,14 +50,12 @@
                 <form action="#" method="post" id="search-zone">
                     <p>
                     <!--ICONE MAP-->
-                        <button type="button" name="map" id="map">
-                            <i class="fas fa-map-marker-alt fa-lg"></i><span class="visually-hidden">Icône de recherche sur carte</span>
+                        <button type="button" id="map" aria-label="Localisation">
+                            <i class="fas fa-map-marker-alt fa-lg" aria-hidden="true"></i>
                         </button>
                     <!--CHAMP DE SAISIE VILLE-->
-                        <label>
-                            <span class="visually-hidden">Saisie de ville</span>
-                            <input type="text" name="search-destination" id="search-destination" placeholder="Marseille, France"/>
-                        </label>
+                        <label for="search-destination">Saisie de ville</label>
+                        <input type="text" id="search-destination" name="search-destination" placeholder="Marseille, France"/>
                     <!--BOUTON RECHERCHER-->
                         <button type="submit" name="search-button" id="search-button">
                             <span id="text-search-button">Rechercher</span>
