@@ -217,6 +217,9 @@ header h2 {
   padding: 16px 16px 15px 16px;
   margin-right: 0;
 }
+.visually-hidden {
+  display: none;
+}
 /* FORM RECHERCHE - CHAMP DE SAISIE VILLE */
 #search-destination {
   border: 1px solid #f2f2f2;
@@ -446,7 +449,7 @@ main {
 main a:hover {
   color: #0065fc;
 }
-h3 {
+main h2 {
   font-size: medium;
   margin-bottom: 5px;
 }
@@ -712,7 +715,8 @@ h3 {
 #activities a:hover {
   color: #0065fc;
 }
-#activities h3 {
+#activities h2 {
+  font-size: medium;
   margin-bottom: 0;
 }
 #activities-cards-frame {
@@ -848,14 +852,18 @@ footer {
     margin-top: 3em;
   }
 }
-footer p {
-  margin-bottom: 0;
-}
 footer div {
   display: flex;
   flex-direction: column;
   width: 30%;
   margin: 0.5em;
+}
+footer h1 {
+  font-size: medium;
+  margin-bottom: 0.3em;
+}
+footer p {
+  margin-bottom: 0;
 }
 @media all and (max-width: 600px) {
   footer {
